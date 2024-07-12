@@ -1,9 +1,9 @@
-var button = document.getElementById("inbt");
-var input = document.getElementById("insert");
+const button = document.getElementById("inbt");
+const input = document.getElementById("insert");
 // color picker
-var body = document.querySelector("body");
-var color1 = document.querySelector(".color1");
-var color2 = document.querySelector(".color2");
+const body = document.querySelector("body");
+const color1 = document.querySelector(".color1");
+const color2 = document.querySelector(".color2");
 
 function colorGradient(){
     body.style.background = 
@@ -15,17 +15,17 @@ function colorGradient(){
 }
 
 function createListElement(){
-    var container = document.querySelector(".container");
-    var div = document.createElement("div");
+    const container = document.querySelector(".container");
+    const div = document.createElement("div");
     div.classList.add("lists");
     container.appendChild(div);
 
-    var ul = document.createElement("ul");
+    const ul = document.createElement("ul");
     div.appendChild(ul);
 
-    var li = document.createElement("li");
-    var checkbox = document.createElement("input");
-    var span = document.createElement("span");
+    const li = document.createElement("li");
+    const checkbox = document.createElement("input");
+    const span = document.createElement("span");
 
     checkbox.setAttribute("type", "checkbox");
     checkbox.classList.add("toggle");
@@ -45,18 +45,18 @@ function createListElement(){
         }
     })
 
-    var li2 = document.createElement("li");
-    var delBtn = document.createElement("button");
+    const li2 = document.createElement("li");
+    const delBtn = document.createElement("button");
     delBtn.appendChild(document.createTextNode("X"));
     delBtn.classList.add("delete");
     
     li2.appendChild(delBtn);
     ul.appendChild(li2);
 
-    var deleteBtn = document.querySelectorAll(".delete");
+    const deleteBtn = document.querySelectorAll(".delete");
     deleteBtn.forEach(function(listItem, index){
         listItem.addEventListener("click", function(){
-            var listt = document.querySelectorAll(".lists")[index];
+            const listt = document.querySelectorAll(".lists")[index];
             listt.classList.add("remove");
             
         })
