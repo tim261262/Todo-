@@ -1,6 +1,18 @@
 var button = document.getElementById("inbt");
 var input = document.getElementById("insert");
+// color picker
+var body = document.querySelector("body");
+var color1 = document.querySelector(".color1");
+var color2 = document.querySelector(".color2");
 
+function colorGradient(){
+    body.style.background = 
+    "linear-gradient(to right, "
+    + color1.value
+    + ", "
+    + color2.value
+    + ")";
+}
 
 function createListElement(){
     var container = document.querySelector(".container");
@@ -72,3 +84,8 @@ function keypressed(event){
 button.addEventListener("click", buttonclicked);
 input.addEventListener("keypress", keypressed);
 
+
+// add Event listner for color gradient
+
+color1.addEventListener("input", colorGradient);
+color2.addEventListener("input", colorGradient);
